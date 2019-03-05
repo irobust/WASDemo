@@ -22,11 +22,11 @@ fierce -dns sanook.com -wordlist /usr/share/dnsenum/dns.txt
 
 ## Recon-ng
 ### recon-ng
-| show modules | แสดงรายการของ modules ที่มีทั้งหมด |
-| use google_site_web | เลือก module ที่ต้องการใช้งาน |
-| show info | ดูว่าต้องการ parameter อะไรบ้าง |
-| show domains | แสดงรายการของ domain ทั้งหมดที่ต้องหารทดสอบ |
-| show hosts | แสดงรายการของ host ทั้งหมดใน domains |
+| show modules		  | แสดงรายการของ modules ที่มีทั้งหมด 		   	|
+| use google_site_web | เลือก module ที่ต้องการใช้งาน 	  			|
+| show info 		  | ดูว่าต้องการ parameter อะไรบ้าง 				|
+| show domains 		  | แสดงรายการของ domain ทั้งหมดที่ต้องหารทดสอบ 	|
+| show hosts 		  | แสดงรายการของ host ทั้งหมดใน domains 		|
 
 Modules
 _______
