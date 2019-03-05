@@ -22,6 +22,8 @@ fierce -dns sanook.com -wordlist /usr/share/dnsenum/dns.txt
 
 ## Recon-ng
 ### recon-ng
+| command | definition |
+|---------|------------|
 | show modules		  | แสดงรายการของ modules ที่มีทั้งหมด 		   	|
 | use google_site_web | เลือก module ที่ต้องการใช้งาน 	  			|
 | show info 		  | ดูว่าต้องการ parameter อะไรบ้าง 				|
