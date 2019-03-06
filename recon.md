@@ -5,14 +5,14 @@ theharvester -b all -d sanook.com
 search ip:111.111.111.111 with Bing.com
 
 ## AXFR
-dig acisonline.net -t ANY (A, AAA, CNAME, MX, NS, TXT, AXFR)
+dig example.com -t ANY (A, AAA, CNAME, MX, NS, TXT, AXFR)
 
-dig acisonline.net -t NS
+dig example.com -t NS
 
-dig @NS...... acisonline.net -t AXFR
+dig @NS...... example.com -t AXFR
 
 ## Scan AXFR
-dnsrecon -d acisonline.net -a
+dnsrecon -d example.com -a
 
 ## Brute Forcing
 dnsenum -f /usr/share/dnsenum/dns.txt sanook.com

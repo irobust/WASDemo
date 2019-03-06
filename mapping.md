@@ -19,16 +19,33 @@
 * nmap --script http-title --script-args="http-title.url=/sqli/example1.php" 10.0.2.4
 
 ## Banner
-1. Wappalyzer (Chrom Plug-in)
+1. Wappalyzer (Chrome Plug-in)
 2. BuiltWith.com
-3. whatweb acisonline.net
+3. whatweb example.com
 
 ## SSL Analysis
 1. ssllabs.com
-2. sslscan acisonline.net
-3. sslyze acisonline.net --heartbleed
+2. sslscan example.com
+3. sslyze example.com --heartbleed
 
-## Web Spider
+## Web Archetecture
+
+### Virtual Host
+* search with Bing.com `ip:111.111.111.111`
+* robtex.com
+
+### Load Balance
+* lbd sanook.com
+
+### Web Application Firewall(WAF)
+* wafw00f example.com
+
+## Web Spider and directory brute forcing
+* Burp suite (GUI)
+* dirbuster (GUI)
+* dirb http://10.0.2.4
+* gobuster -u ... -w ... -x php `apt-get install gobuster`
+* wfuzz --hc 404 -w ... http://10.0.2.4/FUZZ
 
 
 
