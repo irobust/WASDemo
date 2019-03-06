@@ -1,4 +1,4 @@
-# Phase: Mapping
+# Phase II: Mapping
 ## Nmap
 	* nmap 10.0.2.0/24
 	* nmap 10.0.2.0/24 --exclude 10.0.2.2
@@ -16,8 +16,7 @@
 	* nmap -A 10.0.2.4 `same as above`
 	* nmap --script vuln,default 10.0.2.4
 	* nmap --script http-title 10.0.2.4
-	* nmap --script http-title
-		   --script-args="http-title.url=/sqli/example1.php" 10.0.2.4
+	* nmap --script http-title --script-args="http-title.url=/sqli/example1.php" 10.0.2.4
 
 	
 
