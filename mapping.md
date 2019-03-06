@@ -18,6 +18,20 @@
 * nmap --script http-title 10.0.2.4
 * nmap --script http-title --script-args="http-title.url=/sqli/example1.php" 10.0.2.4
 
+## Banner
+1. Wappalyzer (Chrom Plug-in)
+2. BuiltWith.com
+3. whatweb acisonline.net
+
+## SSL Analysis
+1. ssllabs.com
+2. sslscan acisonline.net
+3. sslyze acisonline.net --heartbleed
+
+## Web Spider
+
+
+
 	
 
 
