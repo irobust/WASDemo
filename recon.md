@@ -1,8 +1,9 @@
 # Phase I: Reconnaissance
 
 ## Search engine
-theharvester -b all -d sanook.com
-search ip:111.111.111.111 with Bing.com
+* theharvester -b all -d sanook.com
+* search ip:111.111.111.111 with Bing.com
+* <https://www.exploit-db.com/google-hacking-database>
 
 ## AXFR
 dig example.com -t ANY (A, AAA, CNAME, MX, NS, TXT, AXFR)
