@@ -12,7 +12,7 @@
 * nmap -sT 10.0.2.4 `Establish connection`
 * nmap -Pn 10.0.2.4 `สำหรับ server ที่ปิด ICMP`
 * nmap -T0 10.0.2.4 `delay request ให้ช้าลงเพื่อหลบ IDS, IPS`
-* nmap -O -sV --traceroute --script default 10.0.2.4
+* nmap -O -sV --traceroute --script default 10.0.2.4 `-sC same as --script default`
 * nmap -A 10.0.2.4 `same as above`
 * nmap --script vuln,default 10.0.2.4
 * nmap --script http-title 10.0.2.4
