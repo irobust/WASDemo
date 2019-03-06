@@ -4,6 +4,7 @@
 * theharvester -b all -d sanook.com
 * search ip:111.111.111.111 with Bing.com
 * <https://www.exploit-db.com/google-hacking-database>
+* <http://cvedetails.com>
 
 ## AXFR
 dig example.com -t ANY (A, AAA, CNAME, MX, NS, TXT, AXFR)
@@ -30,6 +31,8 @@ fierce -dns sanook.com -wordlist /usr/share/dnsenum/dns.txt
 | show info 		  | ดูว่าต้องการ parameter อะไรบ้าง 				|
 | show domains 		  | แสดงรายการของ domain ทั้งหมดที่ต้องหารทดสอบ 	|
 | show hosts 		  | แสดงรายการของ host ทั้งหมดใน domains 		|
+| keys list | list api keys ทั้งหมดออกมา |
+| keys add .... | add api key เข้าไปในรายการ |
 
 ### Modules
 _______
