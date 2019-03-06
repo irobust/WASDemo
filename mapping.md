@@ -6,12 +6,12 @@
 * nmap 10.0.2.4
 * nmap -p1-3000 10.0.2.4
 * nmap -p80,443 10.0.2.4
-* nmap -F 10.0.2.4
+* nmap -F 10.0.2.4 `Scan เฉพาะ Famous port เท่านั้น`
 * nmap --top-ports 10 10.0.2.4
-* nmap -sS 10.0.2.4
-* nmap -sT 10.0.2.4
+* nmap -sS 10.0.2.4 `SYNC Scan`
+* nmap -sT 10.0.2.4 `Establish connection`
 * nmap -Pn 10.0.2.4 `สำหรับ server ที่ปิด ICMP`
-* nmap -T0 10.0.2.4
+* nmap -T0 10.0.2.4 `delay request ให้ช้าลงเพื่อหลบ IDS, IPS`
 * nmap -O -sV --traceroute --script default 10.0.2.4
 * nmap -A 10.0.2.4 `same as above`
 * nmap --script vuln,default 10.0.2.4
