@@ -41,6 +41,7 @@
 * wafw00f example.com
 
 ## Web Spider and directory brute forcing
+* OWASP ZAP (GUI)
 * Burp suite (GUI)
 * dirbuster (GUI)
 * dirb http://10.0.2.4
