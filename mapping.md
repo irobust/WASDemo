@@ -19,8 +19,8 @@
 * nmap --script http-title --script-args="http-title.url=/sqli/example1.php" *IP Address*
 * nmap -p80 --script "http-title"  *IP Address*
 * nmap -p80 --script "http-title" --script-args "http-title.url=/sqli/example1.php" *IP Address*
-* nmap -p80 --script "http-enum" -d1 *IP Address*
-* nmap -p80 --script "http-enum" --script-args "http-enum-displayall=1"  -d1 *IP Address*
+* nmap -p80 --script "http-enum" -d *IP Address*
+* nmap -p80 --script "http-enum" --script-args "http-enum-displayall=1"  -d *IP Address*
 * nmap -p80,443 --script "http-waf-detect" *Target Website*
 
 ## Banner
