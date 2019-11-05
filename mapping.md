@@ -14,9 +14,14 @@
 * nmap -T0 10.0.2.4 `delay request ให้ช้าลงเพื่อหลบ IDS, IPS`
 * nmap -O -sV --traceroute --script default 10.0.2.4 `-sC same as --script default`
 * nmap -A 10.0.2.4 `same as above`
-* nmap --script vuln,default 10.0.2.4
+* nmap --script vuln,default 10.0.2.4 `/usr/share/nmap/scripts/http-title.nse`
 * nmap --script http-title 10.0.2.4
-* nmap --script http-title --script-args="http-title.url=/sqli/example1.php" 10.0.2.4
+* nmap --script http-title --script-args="http-title.url=/sqli/example1.php" *IP Address*
+* nmap -p80 --script "http-title"  *IP Address*
+* nmap -p80 --script "http-title" --script-args "http-title.url=/sqli/example1.php" *IP Address*
+* nmap -p80 --script "http-enum" -d1 *IP Address*
+* nmap -p80 --script "http-enum" --script-args "http-enum-displayall=1"  -d1 *IP Address*
+* nmap -p80,443 --script "http-waf-detect" *Target Website*
 
 ## Banner
 1. Wappalyzer (Chrome Plug-in)
@@ -33,6 +38,8 @@
 ### Virtual Host
 * search with Bing.com `ip:111.111.111.111`
 * robtex.com
+* [Pentest Tools](https://pentest-tools.com/information-gathering/find-virtual-hosts)
+* dig axfr @`IP Address` `Domain` +nostat +nocmd +nocomments
 
 ### Load Balance
 * lbd sanook.com
@@ -45,7 +52,7 @@
 * Burp suite (GUI)
 * dirbuster (GUI)
 * dirb http://10.0.2.4
-* gobuster -u ... -w ... -x php `apt-get install gobuster`
+* gobuster -u [URL] -w [Wordlist] -x php `apt-get install gobuster`
 * wfuzz --hc 404 -w ... http://10.0.2.4/FUZZ
 
 
