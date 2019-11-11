@@ -15,3 +15,6 @@
 
 ### Filter by Port
 * tcp.port == 80
+
+### Boolean Operator
+* (!(http.accept == "text/html")) || (ssl.record.version == 0x0303)
