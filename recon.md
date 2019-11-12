@@ -13,6 +13,8 @@ dig example.com -t NS
 
 dig @NS...... example.com -t AXFR
 
+dnswalk example.com.
+
 ## Scan AXFR
 dnsrecon -d example.com -a
 
