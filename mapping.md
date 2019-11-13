@@ -22,6 +22,13 @@
 * nmap -p80 --script "http-enum" -d *IP Address*
 * nmap -p80 --script "http-enum" --script-args "http-enum-displayall=1"  -d *IP Address*
 
+## Other Tools
+* masscan
+* zenmap
+* [angry scanner](https://angryip.org)
+* SPARTA
+* zmap
+
 ## Banner
 1. Wappalyzer (Chrome Plug-in)
 2. BuiltWith.com
