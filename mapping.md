@@ -54,7 +54,7 @@
 * dirbuster (GUI)
 * dirb http://10.0.2.4
 * gobuster -u [URL] -w [Wordlist] -x php `apt-get install gobuster`
-* wfuzz --hc 404 -w ... http://10.0.2.4/FUZZ
+* wfuzz --hc 404 -w [wordlist] http://10.0.2.4/FUZZ
 
 
 
