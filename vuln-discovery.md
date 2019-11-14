@@ -31,6 +31,13 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 	  -l admin
 	  10.0.4.5 http-post-form "/login:username=^USER^:password=^PASS^:submit=Login:F=Invalid username"
 	  -f
+### Create WordList
+* crunch 4 4 `minimum 4 characters and maximum  4 characters`
+* crunch 4 4 -o mywordlist.txt
+* crunch 4 4 1234567890 -o mywordlist.txt
+* crunch 4 4 -t @%,^ -o mywordlist.txt `@=lowercase characters, %=numbers, ,=uppercase characters, ^=symbols`
+* crunch 4 4 -f /usr/share/crunch/charset.lst lalpha -o mywordlist
+* cewl -d 2 -m 4 -w test.txt http://www.php.net `-d=depth, -m=minimum word length, -w=write`
 
 ## SQL Injection
 | excercise | solution |
